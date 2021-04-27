@@ -1,7 +1,7 @@
 {
     "rewrites": [
         {
-          "source": ".*",
+          "source": ".*", hasebetest.g.kuroco-front.app
           "destination": "/index.html"
         }
       ],
