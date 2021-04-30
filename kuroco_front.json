@@ -1,12 +1,11 @@
 {
     "rewrites": [
         {
-          "source": ".*", hasebetest.g.kuroco-front.app
-          "destination": "/index.html"
+          "source": ".*",
+          "destination": ""
         }
       ],
     "redirects": [],
-    "basic":["user:pass","user2:pass2"],
-    "ip_restrictions":["111.111.111.111/32","222.222.222.222/32"]
-    ]
+    "basic":[],
+    "ip_restrictions":[]
 }
