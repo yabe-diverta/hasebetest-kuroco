@@ -1,1 +1,36 @@
-
+{
+  "name": "KurocoLP",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.0.0",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxtjs/recaptcha": "^1.0.4",
+    "core-js": "^3.6.5",
+    "node-sass": "^4.14.1",
+    "node-sass-glob-importer": "^5.3.2",
+    "node-sass-globbing": "0.0.23",
+    "nuxt": "^2.14.6",
+    "nuxt-i18n": "^6.25.0",
+    "remark-emoji": "^2.1.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@vue/test-utils": "^1.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.5.0",
+    "fibers": "^5.0.0",
+    "jest": "^26.5.0",
+    "sass-loader": "^7.1.0",
+    "vue-jest": "^3.0.4"
+  }
+}
