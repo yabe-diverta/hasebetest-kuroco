@@ -1,4 +1,5 @@
 # hasebetest-kuroco
+kurocoのテストサイトです。
 
 ## Build Setup
 
