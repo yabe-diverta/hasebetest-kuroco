@@ -38,15 +38,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-  ],
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-}
-
-modules: [
     '@nuxtjs/google-gtag'
   ],
   'google-gtag': {
     id: 'UA-151755087-5',
   },
+
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
+}
