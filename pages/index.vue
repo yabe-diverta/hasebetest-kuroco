@@ -5,20 +5,20 @@
       <h1 class="title">hasebeテストサイト。</h1>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://hasebetest.g.kuroco-front.app/blog/"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
         >
-          Documentation
+          ブログ
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://hasebetest.g.kuroco-front.app/form/"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
         >
-          GitHub
+          フォーム
         </a>
       </div>
     </div>
