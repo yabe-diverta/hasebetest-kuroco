@@ -6,6 +6,6 @@
         }
       ],
     "redirects": [],
-    "basic":["user:pass","user2:pass2"],
+    "basic":["user:pass","diverta:hasebe"],
     "ip_restrictions":[]
 }
