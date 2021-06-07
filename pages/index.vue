@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">hasebeテスト用のサイトです。</h1>
+      <h1 class="title">hasebeテストサイト。</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
