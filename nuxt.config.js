@@ -1,4 +1,7 @@
-export default {
+require('dotenv').config();
+const { BASE_URL } = process.env;
+
+module.exports = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -38,13 +41,15 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-  ],
-
-  modules: [
-    '@nuxtjs/google-gtag'
+    '@nuxtjs/google-gtag',
+    '@nuxtjs/axios',
   ],
   'google-gtag': {
     id: 'UA-151755087-5',
+  },
+
+  env: {
+    BASE_URL
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
