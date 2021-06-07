@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div><p>ニュース一覧ページ</p>
     <div v-for="n in response.list" :key="n.slug">
       <nuxt-link :to="'/news/'+ n.slug">{{n.ymd}} {{n.subject}}</nuxt-link>
     </div>
