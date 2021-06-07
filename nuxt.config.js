@@ -42,7 +42,7 @@ module.exports = {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/google-gtag',
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   'google-gtag': {
     id: 'UA-151755087-5',
