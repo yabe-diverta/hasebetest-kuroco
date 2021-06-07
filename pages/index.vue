@@ -5,7 +5,7 @@
       <h1 class="title">hasebeテストサイト。</h1>
       <div class="links">
         <a
-          href="https://hasebetest.g.kuroco-front.app/blog/"
+          href="/blog/"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
@@ -13,7 +13,7 @@
           ブログ
         </a>
         <a
-          href="https://hasebetest.g.kuroco-front.app/form/"
+          href="/form/"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
