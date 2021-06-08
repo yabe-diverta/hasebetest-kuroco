@@ -2,8 +2,9 @@
   <div>
     <nav>ナビゲーションバー</nav>
     <nuxt-link to="/">Home</nuxt-link>
-    <nuxt-link to="/blog">ブログ</nuxt-link>
-    <nuxt-link to="/form">フォーム</nuxt-link>
+    <nuxt-link to="/blog/">ブログ</nuxt-link>
+    <nuxt-link to="/form/">フォーム</nuxt-link>
+    <nuxt-link to="/news/">ニュース</nuxt-link>
     <Nuxt />
   </div>
 </template>
