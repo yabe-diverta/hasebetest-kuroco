@@ -1,11 +1,16 @@
 <template>
   <div>
-    <nav>ナビゲーションバー</nav>
-    <nuxt-link to="/">Home</nuxt-link>
-    <nuxt-link to="/blog/">ブログ</nuxt-link>
-    <nuxt-link to="/form/">フォーム</nuxt-link>
-    <nuxt-link to="/news/">ニュース</nuxt-link>
+    <header class="p-header" style="background-color:#696969;">
+      <nav>ナビゲーションバー</nav>
+      <nuxt-link to="/">Home</nuxt-link>
+      <nuxt-link to="/blog/">ブログ</nuxt-link>
+      <nuxt-link to="/form/">フォーム</nuxt-link>
+      <nuxt-link to="/news/">ニュース</nuxt-link>
+    </header>
     <Nuxt />
+    <footer class="p-footer" style="background-color:#696969;">
+      <nav>フッター</nav>
+    </footer>
   </div>
 </template>
 
