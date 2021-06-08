@@ -1,6 +1,7 @@
 <template>
     <div>
       <h1 class="title">{{ response.details.subject }}</h1>
+      <img src="https://hasebetest.g.kuroco-img.app/files/user/1.png">
       <div class="post" v-html="response.details.contents"></div>
     </div>
 </template>
