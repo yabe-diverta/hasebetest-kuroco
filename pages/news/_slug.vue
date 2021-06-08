@@ -9,7 +9,7 @@
 export default {
     async asyncData ({ $axios, params }) {
         try {
-            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/news/' + `${params.slug}`)
+            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/newsdetail/' + `${params.slug}`)
             console.log(response);
             return { response }
         }catch (e) {
