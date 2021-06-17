@@ -1,7 +1,7 @@
 <template>
     <div>
       <h1 class="title">{{ response.details.subject }}</h1>
-      <img src="response.details.ext_col_01.url">
+      <img :src="response.details.ext_col_01.url">
       <div class="post" v-html="response.details.contents"></div>
     </div>
 </template>
