@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { BASE_URL } = process.env;
+const { STATIC_ACCESS_TOKEN } = process.env;
 
 module.exports = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -49,7 +50,8 @@ module.exports = {
   },
 
   env: {
-    BASE_URL
+    BASE_URL, 
+    STATIC_ACCESS_TOKEN
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
