@@ -6,6 +6,7 @@
       <nuxt-link to="/blog/">ブログ</nuxt-link>
       <nuxt-link to="/form/">フォーム</nuxt-link>
       <nuxt-link to="/news/">ニュース</nuxt-link>
+      <nuxt-link to="/static-api/">Static API</nuxt-link>
     </header>
     <Nuxt />
     <footer class="p-footer" style="background-color:#696969;">
