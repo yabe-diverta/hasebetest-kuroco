@@ -3,6 +3,15 @@
       <h1 class="title">{{ response.details.subject }}</h1>
       <img :src="response.details.ext_col_01.url">
       <div class="post" v-html="response.details.contents"></div>
+      <div>vimeoの動画</div>
+      <iframe
+        :src="response.details.ext_col_02.url"
+        width="640"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
+
     </div>
 </template>
 
