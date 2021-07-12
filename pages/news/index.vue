@@ -11,11 +11,11 @@ export default {
     async asyncData ({ route, $axios }) {
 
         const requestNews = async () => {
-            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/2/news');
+            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/news');
             return { response };
         };
         const requestNewsPreview = async (previewToken) => {
-            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/2/news/preview' + '?preview_token=' + previewToken);
+            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/news/preview' + '?preview_token=' + previewToken);
             return { response: { list: [response.details] } };
         };
 
