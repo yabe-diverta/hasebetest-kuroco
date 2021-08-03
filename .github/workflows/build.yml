@@ -17,7 +17,7 @@ jobs:
       - name: "Get branch name and sha"
         id: get_branch
         run: |
-          PR=$(curl -H "Authorization: token d981fb1acac77cf5430215377ce322ab" https://hasebetest.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
+          PR=$(curl -H "Authorization: token d254bbb26c2ae6a3b62b94241db9fdda" https://hasebetest.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
           echo "::set-output name=branch::$(echo $PR | jq -r '.ref')"
           echo "::set-output name=sha::$(echo $PR | jq -r '.sha')"
       - name: Checkout Repo
@@ -40,12 +40,14 @@ jobs:
           name: ${{ steps.get_branch.outputs.sha }}-${{ github.run_id }}
           path: dist
           retention-days: 7
+      - name: Wait for Artifact download
+        run: sleep 15
       - name: Webhook
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_url: "https://hasebetest.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "d981fb1acac77cf5430215377ce322ab"
-          data: '{"domain":"hasebetest.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          webhook_secret: "d254bbb26c2ae6a3b62b94241db9fdda"
+          data: '{"domain":"eha-h.com","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
   pushed_build:
@@ -75,5 +77,5 @@ jobs:
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_url: "https://hasebetest.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "d981fb1acac77cf5430215377ce322ab"
-          data: '{"domain":"hasebetest.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          webhook_secret: "d254bbb26c2ae6a3b62b94241db9fdda"
+          data: '{"domain":"eha-h.com", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
