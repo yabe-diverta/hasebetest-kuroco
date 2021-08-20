@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="p-header" style="background-color:#696969;">
-      <nav>ナビゲーションバー</nav>
+      <nav>ナビゲーションバー<br/>ヘッダーヘッダーヘッダー</nav>
       <nuxt-link to="/">Home</nuxt-link>
       <nuxt-link to="/blog/">ブログ</nuxt-link>
       <nuxt-link to="/form/">フォーム</nuxt-link>
@@ -10,7 +10,7 @@
     </header>
     <Nuxt />
     <footer class="p-footer" style="background-color:#696969;">
-      <nav>フッター</nav>
+      <nav>フッターフッターフッター</nav>
     </footer>
   </div>
 </template>
