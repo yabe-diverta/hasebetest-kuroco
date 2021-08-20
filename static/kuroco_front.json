@@ -6,6 +6,6 @@
         }
       ],
     "redirects": [],
-    "basic":[],
+    "basic":["test:test"],
     "ip_restrictions":[]
 }
