@@ -4,7 +4,7 @@ const { STATIC_ACCESS_TOKEN } = process.env;
 
 module.exports = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: ture,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
