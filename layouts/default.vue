@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="p-header" style="background-color:#696969;">
-      <nav>ナビゲーションバー(メインサイト)<br/>ヘッダーヘッダーヘッダー</nav>
+      <nav>ナビゲーションバー(メインサイト)<br/>ヘッダーヘッダーヘッダーヘッダー</nav>
       <nuxt-link to="/">Home</nuxt-link>
       <nuxt-link to="/blog/">ブログ</nuxt-link>
       <nuxt-link to="/form/">フォーム</nuxt-link>
