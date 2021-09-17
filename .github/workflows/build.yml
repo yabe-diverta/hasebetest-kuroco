@@ -2,11 +2,11 @@ name: Build and deploy to Kuroco front
 on:
   push:
     branches:
-      - dev
+      - develop
   issue_comment:
     types: [created, edited]
   workflow_dispatch:
-    branches: [ dev ]
+    branches: [ develop ]
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
