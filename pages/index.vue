@@ -3,22 +3,8 @@
     <div>
       <h1 class="title">hasebeテストサイト。</h1>
       <div class="links">
-        <a
-          href="/blog/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          ブログ
-        </a>
-        <a
-          href="/form/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          フォーム
-        </a>
+        <a href="/blog/" type="button " class="btn btn-dark btn-lg">ブログ</a>
+        <a href="/form/" type="button" class="btn btn-dark btn-lg">フォーム</a>
       </div>
     </div>
   </div>
