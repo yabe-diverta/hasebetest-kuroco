@@ -141,10 +141,6 @@ export default {
 </script>
 
 <style scoped>
-input {
-  width: 100%;
-  border: none;
-}
 
 .error {
   color: red;
