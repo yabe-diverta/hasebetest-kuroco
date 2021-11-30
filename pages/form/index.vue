@@ -42,15 +42,16 @@
         </div>
       </div>
 
-      <div v-for="col in cols" :key="col.objKey" class="row--form">
+      <div v-for="col in cols" :key="col.objKey" class="form-group">
         <h2>[{{ col.title }}]</h2>
-        <input :name="col.objKey" type="text" />
+        <input :name="col.objKey" type="text" class="form-control"/>
       </div>
 
       <div class="row--bottom-next">
-        <button @click="handleOnSubmit">submit</button>
+        <button @click="handleOnSubmit" class="btn btn-primary btn-lg">submit</button>
       </div>
     </form>
+
 
     <form v-else>
       <div class="row--status">
