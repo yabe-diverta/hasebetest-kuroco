@@ -48,9 +48,21 @@
       <nuxt-link to="/static-api/">Static API</nuxt-link>
     </header>
     <Nuxt />
-    <footer class="p-footer" style="background-color:#696969;">
-      <nav>フッターフッターフッター</nav>
-    </footer>
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2021 会社名</p>
+
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">ホーム</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">特徴</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">価格設定</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQ</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">概要</a></li>
+        </ul>
+     </footer>
   </div>
 </template>
 
@@ -101,5 +113,20 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+/* 仕切り部分 */
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+/* アイコン */
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
 }
 </style>
