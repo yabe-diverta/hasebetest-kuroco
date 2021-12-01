@@ -1,13 +1,122 @@
 <template>
-  <div class="container">
-    <div>
-      <h1 class="title">hasebeテストサイト。</h1>
-      <div class="links">
-        <a href="/blog/" type="button " class="btn btn-dark btn-lg">ブログ</a>
-        <a href="/form/" type="button" class="btn btn-dark btn-lg">フォーム</a>
-      </div>
+<div>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- インジケータ -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="スライド 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="スライド 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="スライド 3"></button>
     </div>
-  </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://hasebetest.g.kuroco-img.app/files/user/Image/slider/bird-g38ad26722_640.jpg" class="d-block w-100" alt=""><rect fill="#777" width="100%" height="100%"/>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>見出しの例。</h1>
+              <p>カルーセルの1番目のスライドの代表的なプレースホルダーコンテンツ。</p>
+              <p><a class="btn btn-primary" href="#">本日登録</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://hasebetest.g.kuroco-img.app/files/user/Image/slider/modern-g647c550d3_640.jpg" class="d-block w-100" alt=""><rect fill="#777" width="100%" height="100%"/>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>別の見出しの例。</h1>
+              <p>カルーセルの2番目のスライドの代表的なプレースホルダーコンテンツ。</p>
+              <p><a class="btn btn-primary" href="#">もっと学ぼう</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://hasebetest.g.kuroco-img.app/files/user/Image/slider/technology-ge3b4c3f98_640.jpg" class="d-block w-100" alt=""><rect fill="#777" width="100%" height="100%"/>
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>もう1つ良い指標。</h1>
+              <p>カルーセルの3番目のスライドの代表的なプレースホルダーコンテンツ。</p>
+              <p><a class="btn btn-primary" href="#">ギャラリーを閲覧</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">前へ</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">次へ</span>
+      </button>
+    </div><!-- /.carousel -->
+
+    <!-- マーケティングメッセージングとフィーチャー
+      ================================================== -->
+    <!-- 残りのページを別のコンテナで囲んで、すべてのコンテンツを中央に配置 -->
+    <div class="container marketing">
+      <!-- カルーセルの下にある3列のテキスト -->
+      <div class="row">
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#777" width="100%" height="100%"/></svg>
+          <h2>見出し</h2>
+          <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#777" width="100%" height="100%"/></svg>
+          <h2>見出し</h2>
+          <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#777" width="100%" height="100%"/></svg>
+          <h2>見出し</h2>
+          <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <!-- フィーチャーを開始 -->
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">最初のフィーチャータイトル。<span class="text-muted">それはあなたの心を吹き飛ばすだろう。</span></h2>
+          <p class="lead">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+        </div>
+        <div class="col-md-5">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">ああ、それは良いことだ。<span class="text-muted">自分で見て。</span></h2>
+          <p class="lead">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">そして、最後に、これ。<span class="text-muted">チェックメイト。</span></h2>
+          <p class="lead">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+        </div>
+        <div class="col-md-5">
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><title>一般的なプレースホルダ画像</title><rect fill="#eee" width="100%" height="100%"/><text fill="#aaa" dy=".3em" x="50%" y="50%">500x500</text></svg>
+        </div>
+      </div>
+
+			<hr class="featurette-divider">
+			<!-- /フィーチャーを終了 -->
+
+		</div><!-- /.container -->
+</div>
 </template>
 
 <script>
@@ -15,34 +124,104 @@ export default {}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* 全体的なスタイル
+/* カルーセルをカスタマイズ
+-------------------------------------------------- */
+
+/* カルーセルの基本クラス */
+.carousel {
+	margin-bottom: 4rem;
+}
+/* 画像を配置しているので、キャプションを手助けする必要がある */
+.carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+/* img要素の配置のために高さを宣言 */
+.carousel-item {
+	height: 32rem;
+}
+
+.carousel-inner { overflow: hidden; }
+
+/* マーケティング・コンテンツ
+-------------------------------------------------- */
+
+/* カルーセルの下の3列の中のテキストを整列 */
+.marketing .col-lg-4 {
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+.marketing h2 {
+	font-weight: 400;
+}
+.marketing .col-lg-4 p {
+	margin-right: .75rem;
+	margin-left: .75rem;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+/* フィーチャー
+------------------------- */
+
+.featurette-divider {
+	margin: 5rem 0; /* ブートストラップの&lt;hr&gt;をもっと外に出す */
 }
 
-.links {
-  padding-top: 15px;
+/* マーケティングの見出しを細めにする */
+.featurette-heading {
+	font-weight: 300;
+	line-height: 1;
+	letter-spacing: -.05rem;
+}
+
+
+/* レスポンシブCSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+	/* カルーセルコンテンツのサイズを大きくする */
+	.carousel-caption p {
+		margin-bottom: 1.25rem;
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.featurette-heading {
+		font-size: 50px;
+	}
+}
+
+@media (min-width: 62em) {
+	.featurette-heading {
+		margin-top: 7rem;
+	}
 }
 </style>
+
+<script>
+var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {interval: 500, wrap: true})
+var slides = document.querySelectorAll('.carousel .carousel-item')
+
+slides.forEach((el) => {
+    // number of slides per carousel-item
+    const minPerSlide = slides.length
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+            next = slides[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
+</script>
