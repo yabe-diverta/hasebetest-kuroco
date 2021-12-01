@@ -1,53 +1,17 @@
 <template>
 <div>
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- インジケータ -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="スライド 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="スライド 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="スライド 3"></button>
-    </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://hasebetest.g.kuroco-img.app/files/user/Image/slider/bird-g38ad26722_640.jpg" class="d-block w-100" alt=""><rect fill="#777" width="100%" height="100%"/>
-          <div class="container">
-            <div class="carousel-caption text-start">
-              <h1>見出しの例。</h1>
-              <p>カルーセルの1番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">本日登録</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://hasebetest.g.kuroco-img.app/files/user/Image/slider/modern-g647c550d3_640.jpg" class="d-block w-100" alt=""><rect fill="#777" width="100%" height="100%"/>
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>別の見出しの例。</h1>
-              <p>カルーセルの2番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">もっと学ぼう</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="https://hasebetest.g.kuroco-img.app/files/user/Image/slider/technology-ge3b4c3f98_640.jpg" class="d-block w-100" alt=""><rect fill="#777" width="100%" height="100%"/>
-          <div class="container">
-            <div class="carousel-caption text-end">
-              <h1>もう1つ良い指標。</h1>
-              <p>カルーセルの3番目のスライドの代表的なプレースホルダーコンテンツ。</p>
-              <p><a class="btn btn-primary" href="#">ギャラリーを閲覧</a></p>
-            </div>
-          </div>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">アルバムの実例</h1>
+          <p class="lead text-muted">短くて、その下のコレクション、そのコンテンツ、クリエイターなどを指し示すものではない。短くて甘いですが、あまりにも短くはないので、人々はそれを完全にスキップしない。</p>
+          <p>
+            <a href="#" class="btn btn-primary my-2">アクションへの主な呼びかけ</a>
+            <a href="#" class="btn btn-secondary my-2">二次的なアクション</a>
+          </p>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">前へ</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">次へ</span>
-      </button>
-    </div><!-- /.carousel -->
+    </section>
 
     <!-- マーケティングメッセージングとフィーチャー
       ================================================== -->
