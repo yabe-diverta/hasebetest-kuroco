@@ -24,15 +24,13 @@
                 <nuxt-link to="/" class="nav-link active" aria-current="page">Home</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/blog/" class="nav-link active" aria-current="page">ブログ</nuxt-link>
+                <nuxt-link to="/blog/" class="nav-link active" aria-current="page" >ブログ</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/news/" class="nav-link active" aria-current="page">ニュース</nuxt-link>
+                <nuxt-link to="/news/" class="nav-link active" aria-current="page" >ニュース</nuxt-link>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/form/"
-                  >フォーム</a
-                >
+                <nuxt-link to="/form/" class="nav-link active" aria-current="page">フォーム</nuxt-link>
               </li>
               <li class="nav-item dropdown">
                 <a
