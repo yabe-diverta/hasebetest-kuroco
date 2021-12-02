@@ -44,14 +44,15 @@
 
       <div v-for="col in cols" :key="col.objKey" class="form-group">
         <h2>[{{ col.title }}]</h2>
-        <input :name="col.objKey" type="text" class="form-control"/>
+        <input :name="col.objKey" type="text" class="form-control" />
       </div>
 
       <div class="row--bottom-next">
-        <button @click="handleOnSubmit" class="btn btn-primary btn-lg">submit</button>
+        <button class="btn btn-primary btn-lg" @click="handleOnSubmit">
+          submit
+        </button>
       </div>
     </form>
-
 
     <form v-else>
       <div class="row--status">
@@ -141,7 +142,6 @@ export default {
 </script>
 
 <style scoped>
-
 .error {
   color: red;
 }
