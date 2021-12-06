@@ -24,21 +24,13 @@
       <!-- 3列のテキスト -->
       <div class="row">
         <div class="col-lg-4">
-          <svg
-            class="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <title>一般的なプレースホルダ画像</title>
+          <img :src="response.details.ext_col_02[0].url" class="bd-placeholder-img rounded-circle" width="140" height="140" />
             <rect fill="#777" width="100%" height="100%" />
-          </svg>
-          <h2>見出し</h2>
+          <h2>{{ response.details.ext_col_03[0] }}</h2>
           <p>
-            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            {{ response.details.ext_col_04[0] }}
           </p>
-          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
+          <p><nuxt-link :to="response.details.ext_col_05[0]" class="btn btn-secondary">詳細を見る</nuxt-link></p>
         </div>
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
@@ -229,4 +221,18 @@ export default {}
 }
 </style>
 
-<script></script>
+<script>
+export default {
+  async asyncData({ $axios }) {
+    try {
+      const response = await $axios.$get(
+        process.env.BASE_URL + '/rcms-api/14/top/1002'
+      )
+      console.log(response)
+      return { response }
+    } catch (e) {
+      console.log(e.message)
+    }
+  },
+}
+</script>
