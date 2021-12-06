@@ -208,7 +208,7 @@ export default {}
 
 /* 背景 */
 .bg-img {
-  background-image: url('https://hasebetest.g.kuroco-img.app/files/user/Image/29_ext_01_0.png');
+  background-image: url('https://hasebetest.g.kuroco-img.app/v=1234567890/files/user/Image/29_ext_01_0.png');
   background-size: cover;
   background-position: center 60%;
 }
