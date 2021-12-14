@@ -2,6 +2,10 @@
   <div>
     <div class="container">
       <h1>ブログ一覧ページ</h1>
+      <p>1ページに{{ response.pageInfo.perPage }}項目を表示しています。</p>
+      <p>このページは{{ response.pageInfo.pageNo }}ページ目です。</p>
+      <p>ブログは全部で{{ response.pageInfo.totalCnt }}あります。</p>
+      <p>最終ページは{{ response.pageInfo.endPageNo }}ページ目になります。</p>
       <div class="row mb-2">
         <div v-for="n in response.list" :key="n.slug" class="col-md-6">
           <div class="row m-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -35,7 +39,7 @@ export default {
   async asyncData({ $axios }) {
     try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/15/blog'
+        process.env.BASE_URL + '/rcms-api/15/blog?cnt=4&pageID=2'
       )
       return { response }
     } catch (e) {
