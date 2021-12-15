@@ -18,6 +18,47 @@
       </div>
     </div>
 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- インジケータ -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img :src="response.details.ext_col_01[0].url" class="bd-placeholder-img" width="100%" height="100%"><rect fill="#777" width="100%" height="100%"/>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>見出しの例。</h1>
+              <p>カルーセルの1番目のスライドの代表的なプレースホルダーコンテンツ。</p>
+              <p><a class="btn btn-primary" href="#">本日登録</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img :src="response.details.ext_col_01[1].url" class="bd-placeholder-img" width="100%" height="100%"><rect fill="#777" width="100%" height="100%"/>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>別の見出しの例。</h1>
+              <p>カルーセルの2番目のスライドの代表的なプレースホルダーコンテンツ。</p>
+              <p><a class="btn btn-primary" href="#">もっと学ぼう</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img :src="response.details.ext_col_01[2].url" class="bd-placeholder-img" width="100%" height="100%"><rect fill="#777" width="100%" height="100%"/>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>もう1つ良い指標。</h1>
+              <p>カルーセルの3番目のスライドの代表的なプレースホルダーコンテンツ。</p>
+              <p><a class="btn btn-primary" href="#">ギャラリーを閲覧</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.carousel -->
+
     <!-- マーケティングメッセージングとフィーチャー
       ================================================== -->
     <!-- 残りのページを別のコンテナで囲んで、すべてのコンテンツを中央に配置 -->
@@ -169,8 +210,30 @@ export default {}
 
 <style>
 /* 全体的なスタイル
-/* マーケティング・コンテンツ
+/* カルーセルをカスタマイズ
 -------------------------------------------------- */
+
+/* カルーセルの基本クラス */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* 画像を配置しているので、キャプションを手助けする必要がある */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* img要素の配置のために高さを宣言 */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
 
 /* カルーセルの下の3列の中のテキストを整列 */
 .marketing .col-lg-4 {

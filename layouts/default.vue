@@ -5,7 +5,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">テストサイト</a>
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <nuxt-link to="/" class="nav-link active" aria-current="page">Home</nuxt-link>
               </li>
@@ -30,6 +30,14 @@
                     <a class="dropdown-item" href="###">Something else here</a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-expanded="false">ドロップダウン</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                 <a class="dropdown-item" href="#">リンク1</a>
+                 <a class="dropdown-item" href="#">リンク2</a>
+                  <a class="dropdown-item" href="#">リンク3</a>
+                </div>
               </li>
             </ul>
             <div>
