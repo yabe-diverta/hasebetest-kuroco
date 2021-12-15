@@ -1,23 +1,9 @@
 <template>
   <div>
     <header class="p-header" style="background-color: #696969">
-      <nav
-        class="navbar navbar-expand-lg navbar-light"
-        style="background-color: #e3f2fd"
-      >
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">テストサイト</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
@@ -33,33 +19,29 @@
                 <nuxt-link to="/form/" class="nav-link active" aria-current="page">フォーム</nuxt-link>
               </li>
               <li class="nav-item dropdown">
-                <a
-                  id="navbarDropdown"
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="##">Another action</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="###">Something else here</a>
                   </li>
                 </ul>
               </li>
             </ul>
+            <div>
+              <nuxt-link v-if="$i18n.locale === 'ja'" :to="`/en` + $route.fullPath">
+                English
+              </nuxt-link>
+              <nuxt-link v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')">
+                Japanese
+              </nuxt-link>
+            </div>
             <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-outline-success" type="submit">
                 Search
               </button>
@@ -68,6 +50,7 @@
         </div>
       </nav>
     </header>
+
     <Nuxt />
     <footer
       class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"

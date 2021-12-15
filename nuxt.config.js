@@ -50,8 +50,18 @@ module.exports = {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
+  //多言語対応 https://qiita.com/matsumana07384/items/4b9731d46c3698b464d8
+  router: {
+    middleware: 'i18n'
+  },
+  generate: {
+    routes: ['/', '/about', '/en', '/en/about']
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/axios'],
+  plugins: ['@/plugins/axios',
+            '@/plugins/i18n.js'
+          ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

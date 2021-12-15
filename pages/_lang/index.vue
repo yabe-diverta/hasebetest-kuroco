@@ -227,7 +227,7 @@ export default {
   async asyncData({ $axios }) {
     try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/14/top/1002'
+        process.env.BASE_URL + '/rcms-api/14/top/1002?_lang=en'
       )
       console.log(response)
       return { response }
