@@ -62,16 +62,9 @@ module.exports = {
   css: [],
 
   //多言語対応 https://qiita.com/matsumana07384/items/4b9731d46c3698b464d8
-  router: {
-    middleware: 'i18n'
-  },
-  generate: {
-    routes: ['/', '/about', '/en', '/en/about']
-  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/axios',
-            '@/plugins/i18n.js'
           ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -85,6 +78,27 @@ module.exports = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        strategy: 'prefix_and_default',
+        // 切り替える言語を定義
+        locales: [
+          { code: 'ja', file: 'ja.json' },
+          { code: 'en', file: 'en.json' },
+        ],
+        // デフォルトの言語を↑で定義したcodeで記載
+        defaultLocale: 'ja',
+        vueI18n: {
+          // ファイルが読めなかった場合の言語を定義
+          fallbackLocale: 'en',
+        },
+        vueI18nLoader: true,
+        lazy: true,
+        // 言語ファイル(.json)のディレクトリを記載
+        langDir: 'locales/',
+      },
+    ],
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/google-gtag',

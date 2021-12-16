@@ -7,10 +7,10 @@
           <div id="navbarSupportedContent" class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <nuxt-link to="/" class="nav-link active" aria-current="page">Home</nuxt-link>
+                <nuxt-link :to="localePath('/')" class="nav-link active" aria-current="page">Home</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/blog/" class="nav-link active" aria-current="page" >ブログ</nuxt-link>
+                <nuxt-link :to="localePath('/blog/')" class="nav-link active" aria-current="page" >ブログ</nuxt-link>
               </li>
               <li class="nav-item">
                 <nuxt-link to="/news/" class="nav-link active" aria-current="page" >ニュース</nuxt-link>
@@ -40,14 +40,8 @@
                 </div>
               </li>
             </ul>
-            <div>
-              <nuxt-link v-if="$i18n.locale === 'ja'" :to="`/en` + $route.fullPath">
-                English
-              </nuxt-link>
-              <nuxt-link v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')">
-                Japanese
-              </nuxt-link>
-            </div>
+            <div><nuxt-link :to="switchLocalePath('en')">English</nuxt-link></div>|
+            <div><nuxt-link :to="switchLocalePath('ja')">japanese</nuxt-link></div>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-outline-success" type="submit">

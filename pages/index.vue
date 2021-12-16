@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ $t('home.title') }}</h1>
+    <h1>{{ $t('home.title') }} - {{$i18n.locale}}</h1>
     <div class="p-3 mb-4 bg-img">
       <div class="text-center container">
         <div class="row py-lg-3">
@@ -287,15 +287,28 @@ export default {}
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    try {
-      const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/14/top/1002'
-      )
-      console.log(response)
-      return { response }
-    } catch (e) {
-      console.log(e.message)
+  async asyncData({ $axios, app }) {
+    if(app.i18n.locale === 'ja'){
+      try {
+       const response = await $axios.$get(
+         process.env.BASE_URL + '/rcms-api/14/top/1002'
+       )
+       console.log(response)
+       return { response }
+      } catch (e) {
+       console.log(e.message)
+       }
+    }
+    else{
+      try {
+       const response = await $axios.$get(
+         process.env.BASE_URL + '/rcms-api/14/top/1002?_lang=en'
+       )
+       console.log(response)
+       return { response }
+      } catch (e) {
+        console.log(e.message)
+       }
     }
   },
 }
