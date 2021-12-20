@@ -1,23 +1,24 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">hasebeテストサイト。</h1>
+      <Logo />
+      <h1 class="title">hasebetest-kuroco</h1>
       <div class="links">
         <a
-          href="/blog/"
+          href="https://nuxtjs.org/"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
         >
-          ブログ
+          Documentation
         </a>
         <a
-          href="/form/"
+          href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
         >
-          フォーム
+          GitHub
         </a>
       </div>
     </div>

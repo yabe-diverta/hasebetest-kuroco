@@ -1,17 +1,6 @@
 <template>
   <div>
-    <header class="p-header" style="background-color:#696969;">
-      <nav>ナビゲーションバー(ステージ)<br/>ヘッダーヘッダーヘッダー</nav>
-      <nuxt-link to="/">Home</nuxt-link>
-      <nuxt-link to="/blog/">ブログ</nuxt-link>
-      <nuxt-link to="/form/">フォーム</nuxt-link>
-      <nuxt-link to="/news/">ニュース</nuxt-link>
-      <nuxt-link to="/static-api/">Static API</nuxt-link>
-    </header>
     <Nuxt />
-    <footer class="p-footer" style="background-color:#696969;">
-      <nav>フッターフッターフッター</nav>
-    </footer>
   </div>
 </template>
 
