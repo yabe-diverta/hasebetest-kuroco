@@ -65,54 +65,16 @@
     <div class="container marketing">
       <!-- 3列のテキスト -->
       <div class="row">
-        <div class="col-lg-4">
-          <img :src="response.details.ext_col_02[0].url" class="bd-placeholder-img rounded-circle" width="140" height="140" />
+        <div v-for="n in response.details.ext_col_02" class="col-lg-4">
+          <img :src="n.ext_col_02.url" class="bd-placeholder-img rounded-circle" width="140" height="140" />
             <rect fill="#777" width="100%" height="100%" />
-          <h2>{{ response.details.ext_col_03[0] }}</h2>
+          <h2>{{ n.ext_col_03 }}</h2>
           <p>
-            {{ response.details.ext_col_04[0] }}
+            {{ n.ext_col_04 }}
           </p>
-          <p><nuxt-link :to="response.details.ext_col_05[0]" class="btn btn-secondary">詳細を見る</nuxt-link></p>
+          <p><nuxt-link :to="n.ext_col_05" class="btn btn-secondary">詳細を見る</nuxt-link></p>
         </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg
-            class="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <title>一般的なプレースホルダ画像</title>
-            <rect fill="#777" width="100%" height="100%" />
-          </svg>
-          <h2>見出し</h2>
-          <p>
-            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          </p>
-          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg
-            class="bd-placeholder-img rounded-circle"
-            width="140"
-            height="140"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <title>一般的なプレースホルダ画像</title>
-            <rect fill="#777" width="100%" height="100%" />
-          </svg>
-          <h2>見出し</h2>
-          <p>
-            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-          </p>
-          <p><a class="btn btn-secondary" href="#">詳細を見る &raquo;</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
       </div>
-      <!-- /.row -->
 
       <!-- フィーチャーを開始 -->
       <hr class="featurette-divider" />
