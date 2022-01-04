@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">hasebetest-kuroco</h1>
+      <h1 class="title">front_kuroco_sample_support</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
