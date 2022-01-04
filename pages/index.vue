@@ -2,7 +2,8 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">front_kuroco_sample_support</h1>
+      <h1 class="title">{{ $t('home.title') }}</h1>
+      <div v-html="response.details.contents"></div>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -61,3 +62,32 @@ export default {}
   padding-top: 15px;
 }
 </style>
+
+<script>
+export default {
+  async asyncData({ $axios, app }) {
+    if(app.i18n.locale === 'ja'){
+      try {
+       const response = await $axios.$get(
+         process.env.BASE_URL + '/rcms-api/1/toppage/1012'
+       )
+       console.log(response)
+       return { response }
+      } catch (e) {
+       console.log(e.message)
+       }
+    }
+    else{
+      try {
+       const response = await $axios.$get(
+         process.env.BASE_URL + '/rcms-api/1/toppage/1012?_lang=en'
+       )
+       console.log(response)
+       return { response }
+      } catch (e) {
+        console.log(e.message)
+       }
+    }
+  },
+}
+</script>

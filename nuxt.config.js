@@ -4,7 +4,7 @@ const { STATIC_ACCESS_TOKEN } = process.env;
 
 module.exports = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -40,6 +40,23 @@ module.exports = {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    [
+      'nuxt-i18n',
+      {
+        strategy: 'prefix',
+        // 切り替える言語を定義
+        locales: [
+          { code: 'ja', file: 'ja.json' },
+          { code: 'en', file: 'en.json' },
+        ],
+        // デフォルトの言語を設定
+        defaultLocale: 'ja',
+        vueI18nLoader: true,
+        lazy: true,
+        // jsonファイルを保存したディレクトリを指定
+        langDir: 'locales/',
+      },
+    ],
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/google-gtag',
