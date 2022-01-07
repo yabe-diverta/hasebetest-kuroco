@@ -43,7 +43,7 @@ module.exports = {
     [
       'nuxt-i18n',
       {
-        strategy: 'prefix',
+        strategy: 'prefix_and_default',
         // 切り替える言語を定義
         locales: [
           { code: 'ja', file: 'ja.json' },
