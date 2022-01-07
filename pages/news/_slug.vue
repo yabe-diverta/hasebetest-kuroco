@@ -7,25 +7,14 @@
 
 <script>
 export default {
-    async asyncData ({ $axios, params, app }) {
-        if(app.i18n.locale === 'ja'){
-            try {
-                const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/newsdetail/' + `${params.slug}`)
-                console.log(response);
-                return { response }
-                }catch (e) {
-                    console.log(e.message)
-                    }
+    async asyncData ({ $axios, params }) {
+        try {
+            const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/newsdetail/' + `${params.slug}`)
+            console.log(response);
+            return { response }
+        }catch (e) {
+            console.log(e.message)
         }
-        else{
-            try {
-                const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/newsdetail/' + `${params.slug}` + '?_lang=en')
-                console.log(response);
-                return { response }
-                }catch (e) {
-                    console.log(e.message)
-                    }
-        }
-    },
+    }
 }
 </script>
