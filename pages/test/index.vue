@@ -1,10 +1,10 @@
 <template>
     <div>
-      <p>KurocoFilesキャッシュのテスト2</p>
+      <p>KurocoFilesキャッシュのテスト3</p>
       <p><a :href="response.details.ext_col_01.url">APIのレスポンスのテストpdf</a></p>
       <p><a href="https://hasebetest.g.kuroco-img.app/v=1234567890/files/user/testfile.pdf">KurocFilesを直接参照テストpdf</a></p>
       <p>APIのレスポンスのテスト画像<img :src="response.details.ext_col_02.url"/></p>
-      <p>KurocFilesを直接参照テスト画像<img src="https://hasebetest.g.kuroco-img.app/v=1234567891/files/user/gazo.png"/></p>
+      <p>KurocFilesを直接参照テスト画像<img src="https://hasebetest.g.kuroco-img.app/v=1234567892/files/user/gazo.png"/></p>
     </div>
 </template>
 
