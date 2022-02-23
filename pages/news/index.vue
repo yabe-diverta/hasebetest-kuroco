@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>ニュース一覧ページ</p>
+
     <div v-for="n in response.list" :key="n.slug">
       <nuxt-link :to="'/news/' + n.slug">{{ n.ymd }} {{ n.subject }}</nuxt-link>
     </div>
@@ -9,32 +10,18 @@
 
 <script>
 export default {
-  async asyncData({ route, $axios }) {
-    const requestNews = async () => {
+  async asyncData({ $axios, query }) {
+    try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/1/news'
+        process.env.BASE_URL + '/rcms-api/1/news',
+        {
+          params: {
+            cnt: 4,
+            pageID: query.pageID,
+          },
+        }
       )
       return { response }
-    }
-    const requestNewsPreview = async (previewToken) => {
-      const response = await $axios.$get(
-        process.env.BASE_URL +
-          '/rcms-api/1/news/preview' +
-          '?preview_token=' +
-          previewToken
-      )
-      return { response: { list: [response.details] } }
-    }
-
-    // URLのクエリに、
-    // preview_tokenが存在する場合は、previewエンドポイントへ、
-    // preview_tokenが存在しない場合は、newsエンドポイントへ、
-    // リクエストします。
-    try {
-      const previewToken = route.query.preview_token
-      return previewToken !== undefined
-        ? await requestNewsPreview(previewToken)
-        : await requestNews()
     } catch (e) {
       console.log(e.message)
     }
