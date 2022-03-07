@@ -1,9 +1,8 @@
 <template>
   <div>
     <p>ニュース一覧ページ{{ this.$route.params.page }}</p>
-    <p>現在のページ {{response.pageInfo.pageNo}}/{{response.pageInfo.totalPageCnt}}</p>
     <div v-for="n in response.list" :key="n.slug">
-      <nuxt-link :to="'/news/detail/' + n.slug">{{ n.ymd }} {{ n.subject }}</nuxt-link>
+      <nuxt-link :to="'/news/' + n.slug">{{ n.ymd }} {{ n.subject }}</nuxt-link>
     </div>
 
     <ul style="list-style: none; display: flex">
@@ -26,7 +25,6 @@ export default {
         process.env.BASE_URL + '/rcms-api/1/news',
         {
           params: {
-            cnt: 4,
             pageID: params.page,
           },
         }
@@ -35,6 +33,11 @@ export default {
     } catch (e) {
       console.log(e.message)
     }
+  },
+  validate({ params, response }) {
+    // Must be a number
+    //return /^\d+$/.test(params.page)
+    return !isNaN(params.page)
   },
 }
 </script>
