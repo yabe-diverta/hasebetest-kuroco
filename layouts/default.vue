@@ -13,7 +13,7 @@
                 <nuxt-link :to="localePath('/blog/')" class="nav-link active" aria-current="page" >ブログ</nuxt-link>
               </li>
               <li class="nav-item">
-                <nuxt-link to="/news/list/1" class="nav-link active" aria-current="page" >ニュース</nuxt-link>
+                <nuxt-link to="/news/list/" class="nav-link active" aria-current="page" >ニュース</nuxt-link>
               </li>
               <li class="nav-item">
                 <nuxt-link to="/form/" class="nav-link active" aria-current="page">フォーム</nuxt-link>
