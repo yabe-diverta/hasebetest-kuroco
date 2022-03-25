@@ -115,4 +115,10 @@ module.exports = {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  axios: {
+    baseURL: process.env.BASE_URL,
+    credentials: true,
+    withCredentials: true
+  },
 }
