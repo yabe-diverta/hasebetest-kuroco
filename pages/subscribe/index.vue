@@ -6,10 +6,10 @@
         {{ resultMessage }}
       </p>
     <input v-model="emailEntered" name="email" type="email" placeholder="email">
-    <button v-on:click.prevent="subscribeSubmit">購読する</button>
+    <button v-on:click.prevent="subscribeSubmit">購読する</button>    
     <button v-on:click.prevent="unsubscribeSubmit">購読解除する</button>
     <button v-on:click.prevent="sendTestMail">テスト送信する</button>
-    </form>
+   </form>
   </div>
 </template>
 
@@ -30,13 +30,13 @@ export default {
                 }
         // post data
         const response = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/13/magazine_subscribe/1`, payload)
+          process.env.BASE_URL + `/rcms-api/19/magazine_subscribe/1`, payload)
           this.resultMessage = response.messages[0]
       } catch (error) {
          this.resultMessage = error.response.data.errors[0].message
       }
     },
-    //購読するクリック時の動作
+    //購読解除するクリック時の動作
     async unsubscribeSubmit() {
       try {
         const payload = {
@@ -44,7 +44,7 @@ export default {
                 }
         // post data
         const response = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/13/magazine_unsubscribe/1`, payload)
+          process.env.BASE_URL + `/rcms-api/19/magazine_unsubscribe/1`, payload)
           this.resultMessage = response.messages[0]
       } catch (error) {
          this.resultMessage = error.response.data.errors[0].message
@@ -58,7 +58,7 @@ export default {
                 }
         // post data
         const response = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/13/sendMail`, payload)
+          process.env.BASE_URL + `/rcms-api/19/magazine_sendMail`, payload)
           this.resultMessage = 'テストメールを送信しました。'
       } catch (error) {
          console.log(error.message)
