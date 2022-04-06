@@ -61,7 +61,7 @@ export default {
           process.env.BASE_URL + `/rcms-api/19/magazine_sendMail`, payload)
           this.resultMessage = 'テストメールを送信しました。'
       } catch (error) {
-         console.log(error.message)
+         this.resultMessage = error.response.data.errors[0].message
       }
     }
   }
