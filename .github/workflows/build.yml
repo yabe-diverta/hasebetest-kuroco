@@ -43,7 +43,7 @@ jobs:
       - name: Wait for Artifact download
         run: sleep 15
       - name: Webhook
-        uses: distributhor/workflow-webhook@v1
+        uses: distributhor/workflow-webhook@v2
         env:
           webhook_url: "https://hasebetest.g.kuroco.app/direct/menu/github/"
           webhook_secret: "d254bbb26c2ae6a3b62b94241db9fdda"
@@ -74,7 +74,7 @@ jobs:
           path: dist
           retention-days: 7
       - name: Webhook
-        uses: distributhor/workflow-webhook@v1
+        uses: distributhor/workflow-webhook@v2
         env:
           webhook_url: "https://hasebetest.g.kuroco.app/direct/menu/github/"
           webhook_secret: "d254bbb26c2ae6a3b62b94241db9fdda"
