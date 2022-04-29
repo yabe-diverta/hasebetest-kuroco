@@ -4,6 +4,7 @@
         {{ resultMessage }}
       </p>
 
+        <input v-model="sitekey" name="sitekey" type="sitekey" placeholder="sitekey">
         <input v-model="email" name="email" type="email" placeholder="email">
         <input
             v-model="password"
@@ -16,9 +17,8 @@
         </button>
 
         <div>
-            <nuxt-link to="/news/list">
-                ニュース一覧ページへ
-            </nuxt-link>
+            <nuxt-link to="/news/list">ニュース一覧ページへ</nuxt-link>
+            <nuxt-link to="/b2btest">b2bテストページへ</nuxt-link>
         </div>
     </form>
 </template>
@@ -27,6 +27,7 @@
 export default {
     data () {
         return {
+            sitekey: '',
             email: '',
             password: '',
             loginStatus: null,
@@ -47,6 +48,10 @@ export default {
     },
     methods: {
         async login () {
+            localStorage.setItem('sitekey', this.sitekey); // save sitekey
+            this.$axios.defaults.baseURL = this.sitekey === 'dev-nuxt-auth'
+                ? 'https://dev-nuxt-auth.a.kuroco.app'
+                : `https://${this.sitekey}.g.kuroco.app`;
             try {
                 const payload = {
                     email: this.email,
