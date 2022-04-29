@@ -12,7 +12,7 @@
       <li v-if="response.pageInfo.pageNo === 1">前へ</li>
       <li v-else><nuxt-link :to="'/news/list/' + (response.pageInfo.pageNo -1) +'/'">前へ</nuxt-link></li>
       <li v-for="i in response.pageInfo.totalPageCnt" :key="i">        
-        <nuxt-link :to="'/news/list/' + i">{{i}}</nuxt-link>
+        <nuxt-link :to="'/news/list/' + i +'/'">{{i}}</nuxt-link>
       </li>
       <li v-if="response.pageInfo.pageNo === response.pageInfo.totalPageCnt">次へ</li>
       <li v-else><nuxt-link :to="'/news/list/' + (response.pageInfo.pageNo +1) +'/'">次へ</nuxt-link></li>
