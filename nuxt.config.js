@@ -9,6 +9,12 @@ module.exports = {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  generate: {
+    routes: [
+      '/news/news1029/',
+    ]
+  }
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'hasebetest-kuroco',
