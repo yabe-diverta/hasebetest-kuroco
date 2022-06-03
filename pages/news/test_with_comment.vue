@@ -35,7 +35,9 @@ async function getAllComments (topics_id) {
     return list
 }
 
+import { mapActions } from 'vuex'
 export default {
+  middleware: 'auth',
   async asyncData ({ $axios, params }) {
     try {
       const profile = await $axios.$get(process.env.BASE_URL + '/rcms-api/18/profile')
