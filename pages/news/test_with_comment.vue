@@ -3,6 +3,9 @@
     <h1 class="title">{{ response.details.subject }}</h1>
     <div class="post" v-html="response.details.contents"></div>
     <div>
+        <p v-if="resultMessage !== null">
+          {{ resultMessage }}
+        </p>
         <ul v-for="comment in comments" :key="comment.comment_id">
             <li>
                 {{ comment.note }} by {{ comment.name }}
@@ -54,7 +57,8 @@ export default {
           userName: '',
           response: null,
           comments: [],
-          inputComment: ''
+          inputComment: '',
+          resultMessage: null,
       }
   },
   methods: {
@@ -69,9 +73,13 @@ export default {
             this.inputComment = ''
     },
     async deleteComment (commentId) {
+      try{
         await this.$axios.$post(`/rcms-api/21/comment_delete/${commentId}`, {})
         this.comments = await getAllComments.call(this, this.response.details.topics_id)
         this.inputComment = ''
+      } catch (error) {
+         this.resultMessage = error.response.data.errors[0].message
+      }
     }
   }
 }
