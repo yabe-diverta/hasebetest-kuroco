@@ -27,7 +27,7 @@
 <script>
 async function getAllComments (topics_id) {
     const { list } = await this.$axios.$get(
-        process.env.BASE_URL + '/rcms-api/21/comment_list',
+        process.env.BASE_URL + '/rcms-api/21/comments',
         {
             params: {
                 module_id: topics_id,
@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     async submitComment () {
-        await this.$axios.$post('/rcms-api/21/comment_insert', {
+        await this.$axios.$post('/rcms-api/21/comment', {
             module_id: this.response.details.topics_id,
             name: `${this.profile.name1} ${this.profile.name2}`,
             mail: this.profile.email,
