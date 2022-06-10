@@ -5,7 +5,7 @@
     </button>
     <p>ニュース一覧ページ{{ this.$route.params.page }}</p>
     <div v-for="n in response.list" :key="n.slug">
-      <nuxt-link :to="`/news/${n.slug}`">{{ n.ymd }} {{ n.subject }}</nuxt-link>
+      <nuxt-link :to="'/news/' + n.slug +'/'">{{ n.ymd }} {{ n.subject }}</nuxt-link>
     </div>
 
     <ul style="list-style: none; display: flex">
