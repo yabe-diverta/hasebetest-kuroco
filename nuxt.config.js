@@ -4,16 +4,10 @@ const { STATIC_ACCESS_TOKEN } = process.env
 
 module.exports = {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: true,
+  ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
-  generate: {
-    routes: [
-      '/news/news1029/',
-    ]
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
