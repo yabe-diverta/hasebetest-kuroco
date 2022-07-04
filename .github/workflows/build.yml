@@ -9,6 +9,7 @@ on:
 env:
   BASE_URL: ${{secrets.BASE_URL}}
   BASE_ORIGIN: ${{secrets.BASE_ORIGIN}}
+  API_SECRET: ${{secrets.API_SECRET}}
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
