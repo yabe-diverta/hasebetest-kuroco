@@ -121,4 +121,13 @@ module.exports = {
     credentials: true,
     withCredentials: true
   },
+
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET
+  },
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'https://nuxtjs.org',
+    apiSecret: process.env.API_SECRET || '1111',
+    baseOrigin: process.env.BASE_ORIGIN
+  }
 }

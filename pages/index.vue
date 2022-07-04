@@ -166,10 +166,6 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style>
 /* 全体的なスタイル
 /* カルーセルをカスタマイズ
@@ -249,7 +245,10 @@ export default {}
 
 <script>
 export default {
-  async asyncData({ $axios, app }) {
+  async asyncData({ $axios, app, $config }) {
+  console.log('baseURL=' + process.env.BASE_URL);
+  console.log('API_SECRET=' + $config.apiSecret);
+  console.log('BASE_ORIGIN=' + $config.baseOrigin);
     if(app.i18n.locale === 'ja'){
       try {
        const response = await $axios.$get(
