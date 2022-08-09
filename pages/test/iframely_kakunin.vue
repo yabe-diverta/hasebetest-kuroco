@@ -2,8 +2,6 @@
   <div v-if="response">
     <h1 class="title">{{ response.details.subject }}</h1>
     <div class="post" v-html="response.details.ext_col_01"></div>
-
-    <code style="white-space: pre-wrap">{{ code }}</code>
   </div>
 </template>
 
@@ -19,8 +17,6 @@ export default {
   data() {
     return {
       response: null,
-      isEmbedJsLoaded: true,
-      code: '',
       iframesCount: null,
     }
   },
@@ -53,6 +49,7 @@ export default {
         async: true,
         charset: 'utf-8',
         src: 'https://iframely.kuroco-front.app/embed.js?cancel=0',
+        // src: '//cdn.iframe.ly/embed.js',
       }
       Object.entries(iframelyResource).forEach(([k, v]) =>
         elm.setAttribute(k, v)
