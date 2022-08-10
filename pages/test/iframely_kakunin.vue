@@ -2,6 +2,12 @@
   <div v-if="response">
     <h1 class="title">{{ response.details.subject }}</h1>
     <div class="post" v-html="response.details.ext_col_01"></div>
+
+    <div class="iframely-embed">
+      <div class="iframely-responsive">
+        <a data-iframely-url href="https://twitter.com/MYEmbassyTokyo"></a>
+      </div>
+    </div>
   </div>
 </template>
 
