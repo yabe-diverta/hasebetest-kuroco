@@ -88,7 +88,7 @@ export default {
   async asyncData({ $axios, app }) {
     try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/16/business/1023'
+        '/rcms-api/16/business/1023'
       )
       console.log(response)
       return { response }

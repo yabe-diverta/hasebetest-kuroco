@@ -27,7 +27,7 @@ export default {
   async asyncData({ $axios, params}) {
     try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/1/news',
+        '/rcms-api/1/news',
         {
           params: {
             pageID: params.page,

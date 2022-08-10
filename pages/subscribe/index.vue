@@ -30,7 +30,7 @@ export default {
                 }
         // post data
         const response = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/19/magazine_subscribe/1`, payload)
+          `/rcms-api/19/magazine_subscribe/1`, payload)
           this.resultMessage = response.messages[0]
       } catch (error) {
          this.resultMessage = error.response.data.errors[0].message
@@ -44,7 +44,7 @@ export default {
                 }
         // post data
         const response = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/19/magazine_unsubscribe/1`, payload)
+          `/rcms-api/19/magazine_unsubscribe/1`, payload)
           this.resultMessage = response.messages[0]
       } catch (error) {
          this.resultMessage = error.response.data.errors[0].message
@@ -58,7 +58,7 @@ export default {
                 }
         // post data
         const response = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/19/magazine_sendMail`, payload)
+          `/rcms-api/19/magazine_sendMail`, payload)
           this.resultMessage = 'テストメールを送信しました。'
       } catch (error) {
          this.resultMessage = error.response.data.errors[0].message

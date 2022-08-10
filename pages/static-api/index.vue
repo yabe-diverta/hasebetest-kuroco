@@ -14,7 +14,7 @@ export default {
   async asyncData({ $axios }) {
     try {
       const response = await $axios.$get(
-        process.env.BASE_URL + '/rcms-api/9/test'
+        '/rcms-api/9/test'
       )
       return { response }
     } catch (e) {

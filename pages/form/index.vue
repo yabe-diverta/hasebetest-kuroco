@@ -42,15 +42,27 @@
         </div>
       </div>
 
-      <div v-for="col in cols" :key="col.objKey" class="form-group">
+      <div v-for="col in cols" :key="col.objKey" class="row--form">
         <h2>[{{ col.title }}]</h2>
-        <input :name="col.objKey" type="text" class="form-control" />
+        <input
+          v-if="col.title === 'file'"
+          :name="col.objKey"
+          type="file"
+          @change="uploadFile"
+        />
+        <input
+          v-else-if="col.title === 'date'"
+          :name="col.objKey"
+          type="date"
+          :min="
+            getMin(col.options.minPeriod)
+          "
+        />
+        <input v-else :name="col.objKey" type="text" />
       </div>
 
       <div class="row--bottom-next">
-        <button class="btn btn-primary btn-lg" @click="handleOnSubmit">
-          submit
-        </button>
+        <button @click="handleOnSubmit">submit</button>
       </div>
     </form>
 
@@ -79,13 +91,13 @@
 </template>
 
 <script>
-const FORM_ID = 6 // 作成したフォーム定義のID
+import strtotime from 'locutus/php/datetime/strtotime';
+
+const FORM_ID = 7; // 作成したフォーム定義のID
 
 export default {
   async asyncData({ $axios }) {
-    const response = await $axios.$get(
-      process.env.BASE_URL + `/rcms-api/1/form/${FORM_ID}`
-    )
+    const response = await $axios.$get(`/rcms-api/22/form/${FORM_ID}`);
     return {
       name: response.details.inquiry_name,
       info: response.details.inquiry_info,
@@ -94,54 +106,89 @@ export default {
         objKey: k,
         ...v,
       })),
-    }
+    };
   },
   data: () => {
     return {
       submitted: false,
       submittedId: null,
       error: null,
-    }
+      file_id: null,
+    };
   },
   methods: {
+    strtotime,
+    getMin(startPeriodStr) {
+      const minDateNum = strtotime(startPeriodStr) * 1000; // to millisec
+      return new Date(minDateNum).toJSON().split('T')[0]; // to YYYY-MM-DD
+    },
+    async uploadFile(e) {
+      const fm = new FormData();
+      fm.append('file', e.target.files[0]);
+
+      const { file_id } = await this.$axios.$post(`/rcms-api/22/file`, fm, {
+        headers: {
+          'Content-Type': 'multipart/form-data', // required to post file as a binary
+        },
+      });
+      this.file_id = file_id;
+    },
     textLines2texts(textLines = '') {
-      return textLines.split('\r\n')
+      return textLines.split('\r\n');
     },
     async handleOnSubmit(e) {
-      e.preventDefault()
+      e.preventDefault();
 
       // collect input elements
       const formInputElements = Array.from(this.$refs.form.elements).filter(
         (elm) => elm.tagName.toLowerCase() === 'input'
-      )
+      );
 
       // transform key:value inputs to an object
       const body = formInputElements
         .map((elm) => ({ [elm.name]: elm.value }))
-        .reduce((prev, cur) => ({ ...prev, ...cur }), {})
+        .filter((inputObj) => Object.values(inputObj).every((v) => v !== ''))
+        .reduce((prev, cur) => ({ ...prev, ...cur }), {});
+
+      // apply file_id instead of the actual file input value
+      if (body.ext_03) {
+        body.ext_03 = {
+          file_id: this.file_id,
+        };
+      }
 
       try {
         // post data
         const { id } = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/1/form?id=${FORM_ID}`,
+          `/rcms-api/22/form?id=${FORM_ID}`,
           body
-        )
-        this.error = null
-        this.submittedId = id
-        this.submitted = true
+        );
+        this.error = null;
+        this.submittedId = id;
+        this.submitted = true;
       } catch (e) {
-        this.error = [`${e}`, ...e.response.data.errors]
+        this.error = [`${e}`, ...e.response.data.errors];
       }
     },
     handleOnBack(e) {
-      e.preventDefault()
-      this.submitted = false
+      e.preventDefault();
+      this.submitted = false;
     },
   },
-}
+};
 </script>
 
-<style scoped>
+<style>
+body,
+h2 {
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  border: none;
+}
+
 .error {
   color: red;
 }

@@ -27,7 +27,7 @@
 <script>
 async function getAllComments (topics_id) {
     const { list } = await this.$axios.$get(
-        '/rcms-api/21/comments',
+        '/rcms-api/21/comments_to_me',
         {
             params: {
                 module_id: topics_id,

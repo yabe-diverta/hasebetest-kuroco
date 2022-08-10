@@ -84,7 +84,7 @@ const FORM_ID = 7 // 作成したフォーム定義のID
 export default {
   async asyncData({ $axios }) {
     const response = await $axios.$get(
-      process.env.BASE_URL + `/rcms-api/1/form/${FORM_ID}`
+      `/rcms-api/1/form/${FORM_ID}`
     )
     return {
       name: response.details.inquiry_name,
@@ -123,7 +123,7 @@ export default {
       try {
         // post data
         const { id } = await this.$axios.$post(
-          process.env.BASE_URL + `/rcms-api/1/form?id=${FORM_ID}`,
+          `/rcms-api/1/form?id=${FORM_ID}`,
           body
         )
         this.error = null

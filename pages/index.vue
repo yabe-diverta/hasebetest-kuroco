@@ -252,7 +252,7 @@ export default {
     if(app.i18n.locale === 'ja'){
       try {
        const response = await $axios.$get(
-         process.env.BASE_URL + '/rcms-api/14/top/1002'
+         '/rcms-api/14/top/1002'
        )
        console.log(response)
        return { response }
@@ -263,7 +263,7 @@ export default {
     else{
       try {
        const response = await $axios.$get(
-         process.env.BASE_URL + '/rcms-api/14/top/1002?_lang=en'
+         '/rcms-api/14/top/1002?_lang=en'
        )
        console.log(response)
        return { response }
